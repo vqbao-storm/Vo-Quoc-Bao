@@ -252,7 +252,28 @@ button { font-family: inherit; }
 .work-entry h3 { font-size: 1.53rem; letter-spacing: -.025em; }
 .work-entry h3 a { color: var(--link); }
 .work-entry h3 a:hover { color: var(--accent); }
-.work-entry h3 span { font: .85em var(--sans); }
+/* Draw link arrows so they also display with narrow symbol font coverage. */
+.link-arrow {
+  display: inline-block;
+  position: relative;
+  width: .68em;
+  height: .68em;
+  margin-left: .09em;
+  vertical-align: .03em;
+  transform: rotate(-45deg);
+}
+.link-arrow::before, .link-arrow::after { content: ""; position: absolute; }
+.link-arrow::before { left: 0; right: 0; top: 50%; border-top: 1.4px solid; }
+.link-arrow::after {
+  right: 0;
+  top: 50%;
+  width: .40em;
+  height: .40em;
+  border-right: 1.4px solid;
+  border-top: 1.4px solid;
+  transform: translateY(-45%) rotate(45deg);
+}
+.link-arrow.up { transform: rotate(-90deg); }
 .work-entry p, .academic-sections p, .contact p { margin-top: 8px; color: var(--muted); }
 .academic-sections {
   display: grid;

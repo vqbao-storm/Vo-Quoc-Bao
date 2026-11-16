@@ -1,165 +1,160 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f7f6f2">
-  <meta name="description" content="The personal website of Vo Quoc Bao — projects, ideas, research, and teaching.">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Vo Quoc Bao — Personal Website">
-  <meta property="og:description" content="A place for my work, ideas, and projects.">
-  <title>Vo Quoc Bao — Personal Website</title>
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/styles.css">
-  <script src="assets/main.js" defer></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Vo Quoc Bao’s personal website for projects, research, and teaching.">
+<title>Vo Quoc Bao · Personal website</title>
+<style>
+:root{color-scheme:light;--paper:#f8f4e9;--ink:#152f37;--muted:#495e60;--line:#c7c9b8;--accent:#a6402d;--panel:#edeadd;--sea:#154d57;--onsea:#f9f6e9;--serif:Georgia,'Times New Roman',serif;--sans:'Segoe UI',Arial,sans-serif}
+:root[data-theme=dark]{color-scheme:dark;--paper:#152b31;--ink:#f5efdf;--muted:#bdc9c0;--line:#4d6364;--accent:#ffa886;--panel:#203a40;--sea:#0c242c;--onsea:#f9f6e9}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:2rem}
+body{margin:0;background:var(--paper);color:var(--ink);font:1rem/1.6 var(--sans)}
+a{color:inherit;text-underline-offset:.25em}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:5px}
+.wrap{width:min(1200px,calc(100% - 88px));margin-inline:auto}
+.skip{position:absolute;top:-5rem;left:1rem;padding:.5rem;background:var(--paper);z-index:4}.skip:focus{top:.5rem}
+header{border-bottom:1px solid var(--line)}
+.bar,.brand,nav,.actions,.hero-links,.footer-inner{display:flex;align-items:center}
+.bar{gap:28px;min-height:78px;position:relative}
+.brand{gap:11px;text-decoration:none;font:bold 21px var(--serif);margin-right:auto;white-space:nowrap}
+.mark{display:grid;place-items:center;width:37px;height:37px;border-radius:50%;background:var(--sea);color:var(--onsea);font:italic 24px var(--serif);border:1px solid #74918b}
+nav{gap:23px} nav a{text-decoration:none;font-size:.9rem} nav a:hover,.textlink:hover{color:var(--accent);text-decoration:underline}
+.actions{gap:8px}.icon{background:transparent;border:1px solid var(--line);color:var(--ink);border-radius:50%;width:42px;height:42px;cursor:pointer;font-size:20px;line-height:1}
+.menu{display:none}
+.hero{display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(30px,5vw,80px);align-items:center;padding-block:clamp(45px,6vw,90px)}
+.hello{font:italic clamp(23px,2.6vw,36px) var(--serif);color:var(--accent);margin:0 0 15px}
+h1,h2,h3,p{margin:0}
+h1,h2,h3{font-family:var(--serif);font-weight:400}
+h1{font-size:clamp(68px,8.8vw,132px);letter-spacing:-.075em;line-height:.88}
+h1 em{display:block;font-weight:400}
+.lead{font-size:clamp(17px,1.45vw,21px);max-width:34ch;margin-block:26px;color:var(--muted)}
+.hero-links{gap:22px;flex-wrap:wrap}
+.button{display:inline-flex;align-items:center;gap:14px;text-decoration:none;background:var(--sea);border:1px solid #678b87;color:var(--onsea);padding:11px 19px;border-radius:6px;font-weight:600}
+.button:hover{background:#21616b}
+.textlink{font-weight:600}
+.art{aspect-ratio:1.26;position:relative;overflow:hidden;margin:0;border-radius:48% 48% 5px 5px / 40% 40% 5px 5px;background:linear-gradient(#123a49 0%,#1d6067 63%,#193d46 100%);box-shadow:0 5px 0 var(--panel)}
+.art canvas{display:block;width:100%;height:100%}
+.band{border-block:1px solid var(--line);padding-block:38px;display:grid;grid-template-columns:1fr 2fr;gap:32px;align-items:baseline}
+h2{font-size:clamp(32px,4vw,56px);letter-spacing:-.045em;line-height:1.08}
+.band p{max-width:49ch;font:clamp(21px,2.3vw,31px)/1.45 var(--serif)}
+.work{padding-block:clamp(42px,6vw,80px)}
+.cards{margin-top:25px;display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:16px}
+.card{border:1px solid var(--line);border-top:4px solid var(--accent);border-radius:5px;background:var(--panel);padding:clamp(20px,2.3vw,34px);display:flex;flex-direction:column;align-items:flex-start;gap:15px}
+.card:nth-child(2){border-top-color:#54817c}.card:nth-child(3){border-top-color:#b18c47}
+.card h3{font-size:clamp(26px,2.5vw,36px);line-height:1.1;letter-spacing:-.04em}
+.card p{color:var(--muted);max-width:40ch}
+.card a{margin-top:auto;padding-top:4px}
+.contact{background:var(--sea);color:var(--onsea);padding-block:clamp(38px,6vw,72px)}
+.contact .wrap{display:flex;align-items:center;justify-content:space-between;gap:25px}
+.contact a{text-decoration-thickness:1px}.contact h2{margin-bottom:7px}
+.footer-inner{justify-content:space-between;gap:20px;padding-block:21px;font-size:.85rem;color:var(--muted)}
+@media(max-width:800px){.wrap{width:calc(100% - 44px)}.bar{gap:14px}nav{gap:14px}.cards{grid-template-columns:1fr 1fr}.card:first-child{grid-column:1/-1}.hero{gap:22px}h1{font-size:clamp(62px,10vw,84px)}}
+@media(max-width:660px){.wrap{width:calc(100% - 36px)}.bar{min-height:65px;flex-wrap:wrap}.menu{display:block}nav{display:none;order:3;width:100%;flex-wrap:wrap;padding:0 0 14px}nav.open{display:flex}nav a{padding:5px}.hero{grid-template-columns:1fr;padding-block:38px;gap:28px}h1{font-size:clamp(62px,14vw,88px)}h1 em{display:inline}.hero-links{gap:20px}.lead{margin-block:18px 22px}.art{aspect-ratio:1.6}.band{grid-template-columns:1fr;gap:12px;padding-block:28px}.cards{grid-template-columns:1fr}.contact .wrap{align-items:flex-start;flex-direction:column}.footer-inner{flex-wrap:wrap}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
 </head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="#top" aria-label="Vo Quoc Bao — home">
-        <span class="brand-symbol" aria-hidden="true">B<span class="brand-dot">.</span></span>
-        <span class="brand-label">Vo Quoc <span>Bao</span></span>
-      </a>
-      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
-        <a href="#about">About</a>
-        <a href="#work">Work</a>
-        <a href="#publications">Publications</a>
-        <a href="#teaching">Teaching</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <div class="header-actions">
-        <button class="icon-button theme-toggle" type="button" aria-label="Switch to dark mode" title="Toggle color theme">
-          <svg class="sun-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
-          <svg class="moon-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 14.2A9 9 0 0 1 9.8 3.2 9 9 0 1 0 20.8 14.2Z"/></svg>
-        </button>
-        <button class="icon-button menu-toggle" type="button" aria-label="Open navigation" aria-controls="site-nav" aria-expanded="false">
-          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-        </button>
-      </div>
-    </div>
-  </header>
+<body id="top">
+<a class="skip" href="#main">Skip to content</a>
+<header><div class="wrap bar">
+<a class="brand" href="#top"><span class="mark" aria-hidden="true">B</span>Vo Quoc Bao</a>
+<nav id="nav" aria-label="Main navigation"><a href="#about">About</a><a href="#work">Work</a><a href="#publications">Publications</a><a href="#teaching">Teaching</a><a href="#contact">Contact</a></nav>
+<div class="actions"><button class="icon" id="theme" aria-label="Switch to dark mode" title="Switch color theme">◐</button><button class="icon menu" id="menu" aria-controls="nav" aria-expanded="false" aria-label="Open navigation">☰</button></div>
+</div></header>
+<main id="main">
+<section class="wrap hero" aria-labelledby="name">
+<div><p class="hello">Hello, I’m</p><h1 id="name">Vo Quoc <em>Bao.</em></h1>
+<p class="lead">A home for my work, ideas, and everything I’m curious about.</p>
+<div class="hero-links"><a class="button" href="#work">Explore my work <span aria-hidden="true">↓</span></a><a class="textlink" href="https://github.com/vqbao-storm">My GitHub ↗</a></div></div>
+<figure class="art" aria-label="A terracotta sun above overlapping teal mountain ridges, drawn in fine contour lines" role="img"><canvas id="landscape" width="1000" height="790" aria-hidden="true"></canvas></figure>
+</section>
+<section id="about" class="wrap band" aria-labelledby="about-title"><h2 id="about-title">About me</h2><p>I enjoy exploring new ideas and finding interesting connections between them.</p></section>
+<section id="work" class="wrap work" aria-labelledby="work-title"><h2 id="work-title">Selected work</h2>
+<div class="cards">
+<article class="card"><h3>Personal website</h3><p>The code behind this site is public. Explore the page and its history on GitHub.</p><a class="textlink" href="https://github.com/vqbao-storm/Vo-Quoc-Bao">View repository ↗</a></article>
+<article id="publications" class="card"><h3>Research &amp; writing</h3><p>A place for papers, articles, preprints, and research notes.</p></article>
+<article id="teaching" class="card"><h3>Teaching</h3><p>A place for course materials, talks, and learning resources.</p></article>
+</div></section>
+<section class="contact" id="contact" aria-labelledby="contact-title"><div class="wrap"><div><h2 id="contact-title">Get in touch</h2><p>Interested in exchanging ideas or working together?</p></div><a href="https://github.com/vqbao-storm">Find me on GitHub ↗</a></div></section>
+</main>
+<footer class="wrap footer-inner"><span>© <span id="year">2026</span> Vo Quoc Bao</span><a href="#top">Back to top ↑</a></footer>
+<script>
+const root = document.documentElement;
+const theme = document.querySelector('#theme');
+function setTheme(value) {
+  root.dataset.theme = value;
+  theme.setAttribute('aria-label', value === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+}
+let preferred = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+try { preferred = localStorage.getItem('theme') || preferred; } catch {}
+setTheme(preferred);
+theme.onclick = () => {
+  setTheme(root.dataset.theme === 'dark' ? 'light' : 'dark');
+  try { localStorage.setItem('theme', root.dataset.theme); } catch {}
+};
+const nav = document.querySelector('#nav');
+const menu = document.querySelector('#menu');
+function setMenu(open) {
+  nav.classList.toggle('open', open);
+  menu.setAttribute('aria-expanded', String(open));
+  menu.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+}
+menu.onclick = () => setMenu(!nav.classList.contains('open'));
+nav.onclick = () => setMenu(false);
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && nav.classList.contains('open')) { setMenu(false); menu.focus(); }
+});
+document.querySelector('#year').textContent = new Date().getFullYear();
 
-  <main id="main">
-    <section class="hero container" id="top" aria-labelledby="hero-heading">
-      <div class="hero-copy">
-        <div class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span> WELCOME TO MY PERSONAL WEBSITE</div>
-        <h1 id="hero-heading" class="personal-hero-title">Hello, I'm<br><em>Vo Quoc Bao.</em></h1>
-        <p class="hero-lead">A home for my work, ideas, and everything I'm curious about.</p>
-        <p class="hero-detail">Explore my projects, research interests, teaching materials, and the things I’m learning along the way. This is a starting point — make it yours.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#work">Explore my work <span aria-hidden="true">↗</span></a>
-          <a class="btn btn-text" href="https://github.com/vqbao-storm" target="_blank" rel="noopener noreferrer">My GitHub <span aria-hidden="true">↗</span></a>
-        </div>
-        <div class="hero-footnote"><span class="status-ring" aria-hidden="true"></span> THIS SITE IS A WORK IN PROGRESS <span class="footnote-separator" aria-hidden="true">/</span> UPDATED 2026</div>
-      </div>
-      <div class="hero-visual" aria-label="Decorative monogram illustration of the letter B" role="img">
-        <div class="art-grid" aria-hidden="true"></div>
-        <div class="art-topline" aria-hidden="true"><span>PERSONAL SPACE</span><span>№ 001 — 2026</span></div>
-        <div class="orbit orbit-outer" aria-hidden="true"></div>
-        <div class="orbit orbit-inner" aria-hidden="true"></div>
-        <div class="monogram" aria-hidden="true">B<span>·</span></div>
-        <span class="floating-tag tag-top" aria-hidden="true">Explore.</span>
-        <span class="floating-tag tag-bottom" aria-hidden="true">Make. Share.</span>
-        <div class="art-bottomline" aria-hidden="true"><span>THE WORK IN BETWEEN</span><span>↗</span></div>
-      </div>
-    </section>
-
-    <section class="section section-alt" id="about" aria-labelledby="about-heading">
-      <div class="container">
-        <div class="section-topline"><span>01 / INTRODUCTION</span><span>GET TO KNOW ME</span></div>
-        <div class="about-layout">
-          <h2 id="about-heading">A little<br><em>about me.</em></h2>
-          <div class="about-content">
-            <p class="large-paragraph">I enjoy exploring new ideas and finding interesting connections between them.</p>
-            <p><strong>Personalize this section:</strong> Replace these sentences with your actual background, role, affiliation, research interests, and what you care about. Two or three short paragraphs work best.</p>
-            <div class="about-pill-row" aria-label="Interest areas to personalize">
-              <span class="pill">Your research area</span>
-              <span class="pill">Your specialty</span>
-              <span class="pill">Your interests</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="work" aria-labelledby="work-heading">
-      <div class="container">
-        <div class="section-topline"><span>02 / WHAT I'M DOING</span><span>SELECTED PROJECTS</span></div>
-        <div class="section-heading-row">
-          <div><h2 id="work-heading">Selected <em>work.</em></h2><p>Projects and ideas worth sharing.</p></div>
-          <span class="section-aside">CURATED / IN PROGRESS</span>
-        </div>
-        <div class="project-grid">
-          <article class="project-card">
-            <div class="project-art project-art-one" aria-hidden="true"><div class="project-art-circle"></div><span>01</span></div>
-            <div class="project-meta">PROJECT / 01 <span>FEATURED</span></div>
-            <h3>Your featured project</h3>
-            <p>Describe a project you’re proud of. Explain the problem, your contribution, and the outcome in one or two sentences.</p>
-            <span class="project-link-hint">Add a project link ↗</span>
-          </article>
-          <article class="project-card">
-            <div class="project-art project-art-two" aria-hidden="true"><div class="project-art-bars"><i></i><i></i><i></i><i></i></div><span>02</span></div>
-            <div class="project-meta">PROJECT / 02 <span>EXPLORATION</span></div>
-            <h3>Another interesting project</h3>
-            <p>Highlight a research idea, technical project, collaboration, or piece of work you would like visitors to discover.</p>
-            <span class="project-link-hint">Add a project link ↗</span>
-          </article>
-          <article class="project-card">
-            <div class="project-art project-art-three" aria-hidden="true"><div class="project-art-diamond"></div><span>03</span></div>
-            <div class="project-meta">PROJECT / 03 <span>OPEN SOURCE</span></div>
-            <h3>A project in progress</h3>
-            <p>Share something you’re currently building or a topic you’re investigating. Replace this example with your own work.</p>
-            <span class="project-link-hint">Add a project link ↗</span>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-alt" id="publications" aria-labelledby="publications-heading">
-      <div class="container">
-        <div class="section-topline"><span>03 / IDEAS IN PRINT</span><span>RESEARCH & WRITING</span></div>
-        <div class="section-heading-row">
-          <div><h2 id="publications-heading">Research & <em>writing.</em></h2><p>A place for papers, articles, preprints, or notes.</p></div>
-        </div>
-        <div class="publication-list">
-          <article class="publication-item">
-            <span class="publication-number">01</span>
-            <div class="publication-detail"><div class="publication-type">REPLACE WITH YOUR PUBLICATION</div><h3>Title of your paper, article, or research note</h3><p>Authors · Journal / conference / platform · Year</p></div>
-            <span class="publication-decoration" aria-hidden="true">↗</span>
-          </article>
-          <article class="publication-item">
-            <span class="publication-number">02</span>
-            <div class="publication-detail"><div class="publication-type">REPLACE WITH YOUR PUBLICATION</div><h3>A second publication or piece of writing</h3><p>Authors · Journal / conference / platform · Year</p></div>
-            <span class="publication-decoration" aria-hidden="true">↗</span>
-          </article>
-        </div>
-        <p class="inline-note">Tip: Replace these examples with real citations. You can add PDF, DOI, arXiv, or project links to each item.</p>
-      </div>
-    </section>
-
-    <section class="section" id="teaching" aria-labelledby="teaching-heading">
-      <div class="container">
-        <div class="section-topline"><span>04 / SHARING KNOWLEDGE</span><span>TEACHING & RESOURCES</span></div>
-        <div class="section-heading-row">
-          <div><h2 id="teaching-heading">Learning is <em>shared.</em></h2><p>Courses, talks, resources, and useful materials.</p></div>
-        </div>
-        <div class="teaching-grid">
-          <article class="teaching-card"><span class="teaching-icon" aria-hidden="true">↗</span><div><div class="card-kicker">COURSE / PLACEHOLDER</div><h3>Course or subject name</h3><p>Institution · Academic year · Add a one-line description of this course.</p></div></article>
-          <article class="teaching-card"><span class="teaching-icon" aria-hidden="true">✳</span><div><div class="card-kicker">RESOURCE / PLACEHOLDER</div><h3>Slides & learning resources</h3><p>Add lecture notes, slides, reading lists, or assignments you want to make public.</p></div></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact-section" id="contact" aria-labelledby="contact-heading">
-      <div class="container contact-inner">
-        <div><span class="contact-eyebrow">05 / GET IN TOUCH</span><h2 id="contact-heading">Let's make<br><em>something good.</em></h2><p>Interested in connecting, exchanging ideas, or working together? Find me on GitHub, or add your preferred email and social links here.</p></div>
-        <a class="contact-arrow" href="https://github.com/vqbao-storm" target="_blank" rel="noopener noreferrer" aria-label="Visit Vo Quoc Bao’s GitHub profile">↗</a>
-      </div>
-      <div class="container contact-links"><a href="https://github.com/vqbao-storm" target="_blank" rel="noopener noreferrer">GITHUB ↗</a><span>ADD YOUR EMAIL / LINKEDIN / SCHOLAR PROFILE HERE</span></div>
-    </section>
-  </main>
-
-  <footer class="site-footer"><div class="container footer-inner"><span>© <span id="current-year">2026</span> Vo Quoc Bao</span><span>Made with care · Hosted on GitHub Pages</span><a href="#top">Back to top ↑</a></div></footer>
+// Draw the static landscape in layers, from distant sky to foreground contours.
+function drawLandscape() {
+  const canvas = document.querySelector('#landscape');
+  const ctx = canvas.getContext('2d');
+  if (!ctx) return;
+  const w = canvas.width, h = canvas.height;
+  let seed = 2718;
+  function random() { seed = (seed * 1664525 + 1013904223) >>> 0; return seed / 4294967296; }
+  const sky = ctx.createLinearGradient(0, 0, 0, h);
+  sky.addColorStop(0, '#153b48'); sky.addColorStop(.68, '#397573'); sky.addColorStop(1, '#e1c496');
+  ctx.fillStyle = sky; ctx.fillRect(0, 0, w, h);
+  ctx.fillStyle = '#e6d7ad';
+  for (let i = 0; i < 220; i++) {
+    ctx.globalAlpha = .2 + random() * .5;
+    ctx.fillRect(random() * w, random() * h * .63, 2, 2);
+  }
+  ctx.globalAlpha = 1;
+  const cx = w * .64, cy = h * .31, r = w * .122;
+  ctx.save(); ctx.beginPath(); ctx.arc(cx, cy, r, 0, 2 * Math.PI); ctx.clip();
+  const sun = ctx.createLinearGradient(0, cy-r, 0, cy+r);
+  sun.addColorStop(0, '#ffd39c'); sun.addColorStop(1, '#e9865f');
+  ctx.fillStyle = sun; ctx.fillRect(cx-r, cy-r, r*2, r*2);
+  ctx.strokeStyle = '#ce795c'; ctx.globalAlpha = .48;
+  for (let y = cy-r; y < cy+r; y += 5) { ctx.beginPath(); ctx.moveTo(cx-r,y); ctx.lineTo(cx+r,y); ctx.stroke(); }
+  ctx.restore();
+  const layers = [
+    [.53, 65, 1.6, '#619189', '#b8c4a3'],
+    [.60, 77, 3.5, '#327576', '#95b6a0'],
+    [.69, 84, 5.9, '#245b61', '#79a59b'],
+    [.80, 78, 2.1, '#143e4b', '#67958c'],
+    [.94, 63, 4.7, '#112f3b', '#47767a']
+  ];
+  for (const [level, amp, phase, fill, stroke] of layers) {
+    function ridge(x, depth) {
+      const t = x / w;
+      return h * level + depth + amp * (Math.sin(t*6.1+phase+depth*.0009) + .27*Math.sin(t*15+phase-depth*.0015) + .08*Math.cos(t*34+phase));
+    }
+    function trace(depth) {
+      ctx.beginPath(); ctx.moveTo(0, ridge(0,depth));
+      for (let x = 3; x < w+3; x += 3) ctx.lineTo(x, ridge(x,depth));
+    }
+    trace(0); ctx.lineTo(w,h); ctx.lineTo(0,h); ctx.closePath();ctx.fillStyle=fill;ctx.fill();
+    ctx.strokeStyle=stroke;ctx.lineWidth=1.5;
+    for (let d=0; d<h*(1-level)+amp*2; d+=8) { trace(d); ctx.stroke(); }
+  }
+}
+drawLandscape();
+</script>
 </body>
 </html>

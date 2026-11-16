@@ -49,23 +49,46 @@
     <div class="reading-column">
       <section id="about" aria-labelledby="about-title">
         <h2 id="about-title" class="opening-title">About me</h2>
-        <p class="introduction">I am Vo Quoc Bao,a researcher at the Institute of Mathematics, VAST. I study the relation between group scheme cohomology and de Rham cohomology via Tannakian duality  .</p>
+        <p class="introduction">I am Vo Quoc Bao, a researcher at the Institute of Mathematics, VAST. I study the relation between group scheme cohomology and de Rham cohomology via Tannakian duality.</p>
 
-        <figure class="knot-plate" id="trefoil">
-          <input class="mesh-input visually-hidden" type="checkbox" id="show-torus" aria-controls="knot-views" checked>
-          <div class="knot-views" id="knot-views">
-            <img class="with-torus" src="images/trefoil-torus.webp" width="920" height="686" alt="An amber trefoil winds around a blue-green wireframe torus.">
-            <img class="knot-only" src="images/trefoil.webp" width="920" height="686" alt="The same amber trefoil alone, with one continuous strand passing over and under itself.">
-          </div>
-          <figcaption class="knot-caption">
-            <span class="knot-notation" aria-label="T of two, three">T(2, 3)</span>
-            <h3>Trefoil knot</h3>
-            <p>One closed curve winds twice around the torus and three times around its tube.</p>
-            <label class="mesh-control" for="show-torus">
-              <span class="switch-track" aria-hidden="true"></span>
-              Show torus
-            </label>
+        <figure class="comparison-plate" id="cohomology-comparison" aria-labelledby="comparison-title">
+          <figcaption>
+            <h3 id="comparison-title">The Tannakian comparison map</h3>
+            <p>Let <i>X</i> be a smooth, geometrically connected variety over a field of characteristic zero.
+              Its differential fundamental group scheme <i>G</i> is defined using the fiber at a rational point <i>x</i>.</p>
           </figcaption>
+
+          <div class="comparison-diagram">
+            <div class="comparison-row">
+              <div class="comparison-term">
+                <math aria-label="V equals the fiber of E at x"><mi>V</mi><mo>=</mo><msub><mi>E</mi><mi>x</mi></msub></math>
+                <span>Representation of <i>G</i></span>
+              </div>
+              <div class="comparison-bridge"><span>Tannakian duality</span><i class="map-line two-way" aria-hidden="true"></i></div>
+              <div class="comparison-term">
+                <math aria-label="E with integrable connection nabla"><mo>(</mo><mi>E</mi><mo>,</mo><mi>∇</mi><mo>)</mo></math>
+                <span>Flat bundle on <i>X</i></span>
+              </div>
+            </div>
+            <div class="comparison-row">
+              <div class="comparison-term">
+                <math aria-label="Degree n cohomology of G with coefficients in V"><msup><mi>H</mi><mi>n</mi></msup><mo>(</mo><mi>G</mi><mo>,</mo><mi>V</mi><mo>)</mo></math>
+                <span>Group scheme cohomology</span>
+              </div>
+              <div class="comparison-bridge"><span>Comparison map</span><i class="map-line" aria-hidden="true"></i></div>
+              <div class="comparison-term">
+                <math aria-label="Degree n de Rham cohomology of X with coefficients in E and nabla"><msubsup><mi>H</mi><mtext>dR</mtext><mi>n</mi></msubsup><mo>(</mo><mi>X</mi><mo>,</mo><mo>(</mo><mi>E</mi><mo>,</mo><mi>∇</mi><mo>)</mo><mo>)</mo></math>
+                <span>de Rham cohomology</span>
+              </div>
+            </div>
+          </div>
+
+          <details class="comparison-example">
+            <summary>When is the comparison an isomorphism?</summary>
+            <p>In degree zero, the map identifies <i>G</i>-invariant vectors with global horizontal sections.
+              For a smooth projective curve of genus at least one, we prove that it is an isomorphism in every degree.</p>
+            <a href="https://arxiv.org/abs/2503.19695">Read the paper with Phung Ho Hai and Dao Van Thinh <span class="link-arrow" aria-hidden="true"></span></a>
+          </details>
         </figure>
       </section>
 
@@ -87,7 +110,7 @@
         <section id="teaching" aria-labelledby="teaching-title">
           <h2 id="teaching-title">Teaching</h2>
           <p>A place for course materials, talks, and learning resources.</p>
-          <a class="inline-link" href="#trefoil">Explore the trefoil figure <span class="link-arrow up" aria-hidden="true"></span></a>
+          <a class="inline-link" href="#cohomology-comparison">Explore the cohomology comparison <span class="link-arrow up" aria-hidden="true"></span></a>
         </section>
       </div>
 

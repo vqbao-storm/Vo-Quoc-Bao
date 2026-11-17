@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en" id="top">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Stratified bundles in positive characteristic and their cohomology on smooth projective curves.">
+  <title>Stratified K(π, 1)-schemes · Vo Quoc Bao</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="masthead">
+    <div class="shell header-row">
+      <a href="index.html" class="signature" aria-label="Vo Quoc Bao, home">vqb<span>.</span></a>
+      <nav id="navigation" class="site-nav" aria-label="Main navigation">
+        <a href="index.html#about">About</a>
+        <a href="index.html#work">Work</a>
+        <a href="index.html#publications">Research</a>
+        <a href="index.html#teaching">Blog</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-button" id="theme" type="button" aria-label="Switch color theme" title="Switch color theme" hidden>
+          <span class="theme-icon" aria-hidden="true"></span>
+        </button>
+        <button class="menu-button" id="menu" type="button" aria-expanded="false" aria-controls="navigation" hidden>Menu</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="shell" style="max-width: 54rem; padding-block: clamp(2rem, 5vw, 4rem)">
+    <h1 class="opening-title">Stratified <i>K</i>(π, 1)-schemes</h1>
+    <p class="introduction">When can the stratified fundamental group scheme recover the cohomology of a stratified bundle?</p>
+
+    <figure class="comparison-plate" aria-labelledby="stratified-comparison">
+      <figcaption>
+        <h2 id="stratified-comparison">The comparison in positive characteristic</h2>
+        <p>Let <i>X</i> be a smooth, connected scheme over an algebraically closed field <i>k</i> of characteristic <i>p</i> &gt; 0. Fix a point <i>x</i> in <i>X</i>(<i>k</i>). Its fiber functor identifies a finite-rank stratified bundle 𝒱 with a module for the stratified fundamental group scheme <math aria-label="pi str of X based at x"><msup><mi>π</mi><mtext>str</mtext></msup><mo>(</mo><mi>X</mi><mo>,</mo><mi>x</mi><mo>)</mo></math>. The underlying vector space is <math aria-label="V equals the fiber of script V at x"><mi>V</mi><mo>=</mo><msub><mi mathvariant="normal">𝒱</mi><mi>x</mi></msub></math>.</p>
+      </figcaption>
+      <div class="comparison-diagram">
+        <div class="comparison-row">
+          <div class="comparison-term">
+            <math aria-label="Degree n group scheme cohomology with coefficients in V"><msup><mi mathvariant="normal">H</mi><mi>n</mi></msup><mo>(</mo><msup><mi>π</mi><mtext>str</mtext></msup><mo>(</mo><mi>X</mi><mo>,</mo><mi>x</mi><mo>)</mo><mo>,</mo><mi>V</mi><mo>)</mo></math>
+            <span>Group scheme cohomology</span>
+          </div>
+          <div class="comparison-bridge"><span>Canonical morphism</span><i class="map-line" aria-hidden="true"></i></div>
+          <div class="comparison-term">
+            <math aria-label="Degree n stratified cohomology of X over k with coefficients in script V"><msubsup><mi mathvariant="normal">H</mi><mtext>str</mtext><mi>n</mi></msubsup><mo>(</mo><mi>X</mi><mo>/</mo><mi>k</mi><mo>,</mo><mi mathvariant="normal">𝒱</mi><mo>)</mo></math>
+            <span>Stratified cohomology</span>
+          </div>
+        </div>
+      </div>
+      <p style="margin-top: 1rem">The stratified <i>K</i>(π, 1)-condition asks that this map be an isomorphism for each finite-rank stratified bundle and every degree <i>n</i> ≥ 0.</p>
+    </figure>
+
+    <section class="work-section" aria-labelledby="curve-result">
+      <h2 id="curve-result">Smooth projective curves</h2>
+      <p style="margin-top: .75rem">For a smooth projective connected curve over <i>k</i>, our comparison theorem establishes the stratified <i>K</i>(π, 1)-condition. In particular, for every finite-dimensional module <i>V</i>, the group scheme cohomology vanishes in degrees <i>n</i> ≥ 2.</p>
+        <article class="work-entry" id="paper-stratified-curves">
+          <h3><a href="https://arxiv.org/abs/2507.20020">Cohomology of the stratified fundamental group of curves</a></h3>
+          <p>Vo Quoc Bao, Phung Ho Hai, and Dao Van Thinh.</p>
+          <p><strong>Preprint.</strong> <a href="https://arxiv.org/abs/2507.20020">arXiv:2507.20020</a>, revised 13 September 2026.</p>
+        </article>
+    </section>
+    <p style="margin-top: 1.5rem"><a class="inline-link" href="index.html#cohomology-comparison">Compare with de Rham <i>K</i>(π, 1)-schemes</a></p>
+  </main>
+
+  <footer class="footer">
+    <div class="shell footer-row">
+      <span>© <span id="year">2026</span> Vo Quoc Bao</span>
+      <span>Layout inspired by <a href="https://emilyriehl.github.io/">Emily Riehl’s homepage</a>.</span>
+      <a class="back-link" href="#top">Back to top <span class="link-arrow up" aria-hidden="true"></span></a>
+    </div>
+  </footer>
+</body>
+</html>

@@ -53,41 +53,40 @@
 
         <figure class="comparison-plate" id="cohomology-comparison" aria-labelledby="comparison-title">
           <figcaption>
-            <h3 id="comparison-title">The Tannakian comparison map</h3>
-            <p>Let <i>X</i> be a smooth, geometrically connected variety over a field of characteristic zero.
-              Its differential fundamental group scheme <i>G</i> is defined using the fiber at a rational point <i>x</i>.</p>
+            <h3 id="comparison-title">de Rham <i>K</i>(π, 1)-schemes</h3>
+            <p>Fix a smooth, geometrically connected scheme <i>X</i> over a field <i>k</i> of characteristic zero and a point <i>x</i> ∈ <i>X</i>(<i>k</i>). Write <math aria-label="pi diff of X over k"><msup><mi>π</mi><mtext>diff</mtext></msup><mo>(</mo><mi>X</mi><mo>/</mo><mi>k</mi><mo>)</mo></math> for its differential fundamental group scheme based at <i>x</i>.</p>
+            <p>The pointed scheme is a de Rham <i>K</i>(π, 1)-scheme precisely when the lower arrow is an isomorphism in every degree <i>n</i> ≥ 0 for every finite-dimensional representation <i>V</i>.</p>
           </figcaption>
 
           <div class="comparison-diagram">
             <div class="comparison-row">
               <div class="comparison-term">
-                <math aria-label="V equals the fiber of E at x"><mi>V</mi><mo>=</mo><msub><mi>E</mi><mi>x</mi></msub></math>
-                <span>Representation of <i>G</i></span>
+                <math aria-label="V equals the fiber of the bundle script V at x"><mi>V</mi><mo>=</mo><msub><mi mathvariant="normal">𝒱</mi><mi>x</mi></msub></math>
+                <span>Fiber representation</span>
               </div>
               <div class="comparison-bridge"><span>Tannakian duality</span><i class="map-line two-way" aria-hidden="true"></i></div>
               <div class="comparison-term">
-                <math aria-label="E with integrable connection nabla"><mo>(</mo><mi>E</mi><mo>,</mo><mi>∇</mi><mo>)</mo></math>
+                <math aria-label="The bundle script V with integrable connection nabla"><mo>(</mo><mi mathvariant="normal">𝒱</mi><mo>,</mo><mi>∇</mi><mo>)</mo></math>
                 <span>Flat bundle on <i>X</i></span>
               </div>
             </div>
             <div class="comparison-row">
               <div class="comparison-term">
-                <math aria-label="Degree n cohomology of G with coefficients in V"><msup><mi>H</mi><mi>n</mi></msup><mo>(</mo><mi>G</mi><mo>,</mo><mi>V</mi><mo>)</mo></math>
+                <math aria-label="Degree n group scheme cohomology of pi diff of X over k with coefficients in V"><msup><mi mathvariant="normal">H</mi><mi>n</mi></msup><mo>(</mo><msup><mi>π</mi><mtext>diff</mtext></msup><mo>(</mo><mi>X</mi><mo>/</mo><mi>k</mi><mo>)</mo><mo>,</mo><mi>V</mi><mo>)</mo></math>
                 <span>Group scheme cohomology</span>
               </div>
-              <div class="comparison-bridge"><span>Comparison map</span><i class="map-line" aria-hidden="true"></i></div>
+              <div class="comparison-bridge"><span>Canonical morphism</span><i class="map-line" aria-hidden="true"></i></div>
               <div class="comparison-term">
-                <math aria-label="Degree n de Rham cohomology of X with coefficients in E and nabla"><msubsup><mi>H</mi><mtext>dR</mtext><mi>n</mi></msubsup><mo>(</mo><mi>X</mi><mo>,</mo><mo>(</mo><mi>E</mi><mo>,</mo><mi>∇</mi><mo>)</mo><mo>)</mo></math>
+                <math aria-label="Degree n de Rham cohomology of X over k with coefficients in script V and nabla"><msubsup><mi mathvariant="normal">H</mi><mtext>dR</mtext><mi>n</mi></msubsup><mo>(</mo><mi>X</mi><mo>/</mo><mi>k</mi><mo>,</mo><mo>(</mo><mi mathvariant="normal">𝒱</mi><mo>,</mo><mi>∇</mi><mo>)</mo><mo>)</mo></math>
                 <span>de Rham cohomology</span>
               </div>
             </div>
           </div>
 
           <details class="comparison-example">
-            <summary>When is the comparison an isomorphism?</summary>
-            <p>In degree zero, the map identifies <i>G</i>-invariant vectors with global horizontal sections.
-              For a smooth projective curve of genus at least one, we prove that it is an isomorphism in every degree.</p>
-            <a href="https://arxiv.org/abs/2503.19695">Read the paper with Phung Ho Hai and Dao Van Thinh <span class="link-arrow" aria-hidden="true"></span></a>
+            <summary>Examples of de Rham <i>K</i>(π, 1)-schemes</summary>
+            <p>Smooth projective curves of genus at least one satisfy this property, as shown in <a href="https://arxiv.org/abs/2503.19695">my paper with Phung Ho Hai and Dao Van Thinh</a>.</p>
+            <p>Abelian varieties also satisfy it in every dimension. See <a href="https://arxiv.org/abs/2601.01595">my paper with Quang-Khai Nguyen</a>.</p>
           </details>
         </figure>
       </section>
@@ -110,7 +109,7 @@
         <section id="teaching" aria-labelledby="teaching-title">
           <h2 id="teaching-title">Teaching</h2>
           <p>A place for course materials, talks, and learning resources.</p>
-          <a class="inline-link" href="#cohomology-comparison">Explore the cohomology comparison <span class="link-arrow up" aria-hidden="true"></span></a>
+          <a class="inline-link" href="#cohomology-comparison">Explore de Rham <i>K</i>(π, 1)-schemes <span class="link-arrow up" aria-hidden="true"></span></a>
         </section>
       </div>
 

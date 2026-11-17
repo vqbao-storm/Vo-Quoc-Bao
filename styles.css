@@ -271,7 +271,7 @@ button { font-family: inherit; }
   font-weight: 600;
   color: #f4d4ab;
 }
-.comparison-example a { display: inline-block; margin-top: .6rem; color: var(--plate-jade); font-size: .94rem; }
+.comparison-example a { color: var(--plate-jade); font-size: .94rem; }
 .comparison-example summary:hover, .comparison-example a:hover { color: white; }
 .comparison-example :focus-visible { outline-color: var(--plate-gold); }
 @container (max-width: 34rem) {
@@ -283,7 +283,7 @@ button { font-family: inherit; }
   .comparison-term math { font-size: clamp(1rem, 4cqi, 1.45rem); }
   .map-line { grid-row: 2; grid-column: 2; }
 }
-@container (max-width: 18rem) {
+@container (max-width: 23rem) {
   .comparison-row { grid-template-columns: 1fr; gap: 9px; }
   .comparison-term, .comparison-term:last-child { grid-column: 1; grid-row: auto; }
   .comparison-bridge { display: flex; flex-direction: row; justify-content: center; gap: 12px; padding: 6px 0; }
